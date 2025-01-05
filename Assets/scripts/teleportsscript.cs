@@ -11,7 +11,7 @@ public class PortalTransport : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Check if this GameObject is tagged as portal1
-            if (gameObject.CompareTag("portal1"))
+            if (gameObject.CompareTag("Player"))
             {
                 // Load the specified target scene
                 SceneManager.LoadScene(targetSceneName);
