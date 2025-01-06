@@ -3,48 +3,50 @@ using UnityEngine.SceneManagement;
 
 public class InvisibilityTrigger : MonoBehaviour
 {
-    public string sceneToLoad = "NextScene"; // Name of the scene to load
+    [SerializeField] private string targetSceneName = "lobby";
     private Collider triggerCollider;
     private Renderer objectRenderer;
-    private bool playerInTrigger = false;
 
     void Start()
     {
-        // Get the Renderer component and disable it
+        // Get the Renderer and Collider components and disable them
         objectRenderer = GetComponent<Renderer>();
+        triggerCollider = GetComponent<Collider>();
+
         if (objectRenderer != null)
         {
             objectRenderer.enabled = false;
         }
 
-        // Make the object invisible for 30 seconds
+        if (triggerCollider != null)
+        {
+            triggerCollider.enabled = false;
+        }
+
+        // Reactivate the object and trigger after 30 seconds
         Invoke(nameof(EnableVisibilityAndTrigger), 30f);
     }
 
     void EnableVisibilityAndTrigger()
     {
-        // Enable the object's Renderer
+        // Enable the object's Renderer and Collider
         if (objectRenderer != null)
         {
             objectRenderer.enabled = true;
         }
 
-        // Add a trigger collider
-        triggerCollider = gameObject.AddComponent<BoxCollider>();
-        triggerCollider.isTrigger = true;
+        if (triggerCollider != null)
+        {
+            triggerCollider.enabled = true;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !playerInTrigger)
+        if (other.CompareTag("Player"))
         {
-            playerInTrigger = true;
-            Invoke(nameof(LoadNextScene), 2f);
+            // Load the specified target scene
+            SceneManager.LoadScene(targetSceneName);
         }
-    }
-
-    private void LoadNextScene()
-    {
-        SceneManager.LoadScene(sceneToLoad);
     }
 }
