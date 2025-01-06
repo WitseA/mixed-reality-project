@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 51da0a65ef7a2164681549f3fea606b9
+  productGUID: 3ade192b166fa47459c6304c81d1a926
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: vr
+  productName: mixed-reality-bugfixtesting
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -850,14 +850,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: vr
+  metroPackageName: mixed-reality-bugfixtesting
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: vr
+  metroApplicationDescription: mixed-reality-bugfixtesting
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -926,10 +926,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: fb191817-6654-4221-b30d-b3168bddb37d
+  cloudProjectId: 6c2ba4ac-ead7-4716-b857-3defc9d46317
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: vr
+  projectName: mixed-reality-bugfixtesting
   organizationId: wetisa
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
