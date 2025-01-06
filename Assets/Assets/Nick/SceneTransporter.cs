@@ -1,27 +1,31 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
+[RequireComponent(typeof(UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable))]
 public class SceneTransporter : MonoBehaviour
 {
     [Tooltip("The name of the scene to load on interaction.")]
     [SerializeField] private string targetSceneName;
 
+    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable interactable;
+
     private void OnEnable()
     {
-        // Subscribe to the interaction event
-        var interactable = GetComponent<XRBaseInteractable>();
+        interactable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable>();
         if (interactable != null)
         {
             interactable.selectEntered.AddListener(OnInteract);
+            Debug.Log($"Listener added for {name}'s selectEntered event.");
+        }
+        else
+        {
+            Debug.LogError("No XRBaseInteractable component found. Please attach one to this GameObject.");
         }
     }
 
     private void OnDisable()
     {
-        // Unsubscribe from the interaction event
-        var interactable = GetComponent<XRBaseInteractable>();
         if (interactable != null)
         {
             interactable.selectEntered.RemoveListener(OnInteract);
@@ -30,14 +34,14 @@ public class SceneTransporter : MonoBehaviour
 
     private void OnInteract(SelectEnterEventArgs args)
     {
-        // Ensure the scene name is valid
         if (!string.IsNullOrEmpty(targetSceneName))
         {
+            Debug.Log($"Loading scene: {targetSceneName}");
             SceneManager.LoadScene(targetSceneName);
         }
         else
         {
-            Debug.LogWarning("Target scene name is not set!");
+            Debug.LogWarning("Target scene name is not set! Cannot load scene.");
         }
     }
 }
