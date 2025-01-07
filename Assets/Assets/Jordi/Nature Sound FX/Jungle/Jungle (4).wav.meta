@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Assets/Jordi/Nature Sound FX/Jungle/Jungle (4).wav.meta
 guid: 27392ddbb9f7fe8428c09ea2f1c238d2
+=======
+guid: 450c3e7d3828d504b91051b413760a25
+>>>>>>> bugfix:Assets/Assets/Jordi/Nature Sound FX/Jungle/Jungle (2) Loop.wav.meta
+=======
+guid: 27392ddbb9f7fe8428c09ea2f1c238d2
+>>>>>>> bugfix
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6

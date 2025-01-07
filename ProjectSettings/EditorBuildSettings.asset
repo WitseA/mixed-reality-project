@@ -6,8 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/SampleScene.unity
     guid: 55daccc09a3b69647bbab145b54a3ab3
+=======
+    path: Assets/Scenes/lobby.unity
+    guid: eda43f20d853dda40bd97d78da5a4dac
+  - enabled: 1
+    path: Assets/Scenes/Dries_island.unity
+    guid: cbba5f8d3604341f58760e7bb21ba481
+  - enabled: 1
+    path: Assets/Scenes/test_portals.unity
+    guid: 9e34d0d91a4e51e46a19ba6612ad0d48
+  - enabled: 1
+    path: Assets/Scenes/martin-margiela.unity
+    guid: d5a67cd56902a10439f7d86658295701
+>>>>>>> bugfix
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}
