@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement; // Required for scene management
 
 public class PortalTransport : MonoBehaviour
 {
-    [SerializeField] private string targetSceneName = "test_portals"; // Replace with your target scene name
+    [SerializeField] private string targetSceneName = "lobby"; // Replace with your target scene name
 
     private void OnTriggerEnter(Collider other)
     {
